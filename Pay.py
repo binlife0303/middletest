@@ -1,25 +1,22 @@
-#!C:\Users\tommy\AppData\Local\Programs\Python\Python310\python.exe
+#!C:\Python311\python.exe
 #-*- coding: utf-8 -*-
-import codecs, sys
+import codecs, sys,cgi
 sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer)
-
+import sql as sql
 from dbConfig import conn, cur
 
-print("Content-Type: text/html; charset=utf-8\n")
-print("""
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>結帳</title>
-</head>
-<body>
-""")
+print("Content-type: text/html\n")
+print('<html><head><meta charset="utf-8"><title>結帳</title></head><body>')
 
+table = cgi.FieldStorage()
 total = 0
-shopList = sql.getMyList()
-for(id, name, price, amount) in shopList:
-    total += price*amount
+MyList = sql.getMyList()
+quantity = table.getvalue('quantity')
+stock = table.getvalue('stock')
+stockLast = stock - quantity
+
+for(id, name, price, quantity) in MyList:
+    total += price*quantity
 print(f"<p>總價：{total}</p>")
-print("<a href='myCart.py'>回購物車</a>")
+print("<a href='MyList.py'>回購物車</a>")
 print("</body></html>")

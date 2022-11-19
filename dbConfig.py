@@ -10,7 +10,7 @@ try:
 		password="",
 		host="127.0.0.1",
 		port=3306,
-		database="mydb_0919"
+		database="middletest"
 	)
 except: #mariadb.Error as e:
 	print("Error connecting to DB")
