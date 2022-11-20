@@ -1,20 +1,16 @@
-# MidTerm
-108213016 黃宇成 期中購物車作業.
-
-1. addCart.py為將商品加入購物車的後端程式
-
-2. addCartForm.html為加入購物車之前端程式
-
-3. control為sql程式集
-
-4. dbConfig為資料庫連線
-
-5. menu為商品首頁(請先點進這裡)
-
-6. midterm.sql為要匯入mysql之資料庫
-
-7. myCart為"我的購物車"
-
-8. removeFromCart.py為將商品拿出購物車之後端程式
-
-9. 結帳.py顯示最後總價格
+# middletest
+108213001 方紀彬
+1. middletest.sql 為資料庫 model
+2. dbConfig.py 與資料庫連接
+3. Home.py 顯示賣場
+4. InsertGood.html 上架新商品之view
+5. InsertGood.py 上架新商品之control
+6. DeleteGood.html 下架新商品之view
+7. deleteGood.py 下架新商品之control
+8. addStock.html 增加商品存貨之view
+9. addStock.py 增加商品存貨之control
+10. MyList2.html 將商品新增至購物車之view
+11. addToMyList.py 將商品新增至購物車之control
+12. Mylist.py 顯示購物車
+13. removeOnMyList.py 將商品從購物車移除之control
+14. Pay.py 結帳之control

@@ -16,19 +16,15 @@ quantity = table.getvalue('quantity')
 stock = table.getvalue('stock')
 
 
-#for(id,name,price,quantity) in MyList:#2
-#    if(sql.checkS(id)>=sql.checkQ(id)):
-#        total += price*quantity
-#        sql.ship(id, quantity)
-#if (total == 0):
-#    print("有商品之存貨不足!")
-#else:
-    #print(f"<p>總價：{total}</p>")
 for(id,name,price,quantity) in MyList:#2
-    total += price*quantity
-Q=sql.checkQ(1)    
-print(Q)
-print(f"<p>總價：{total}</p>")
+    if(sql.checkS(id)>=sql.checkQ(id)):
+        total += price*quantity
+        sql.ship(id, quantity)
+        sql.deleteFromMyList(id)
+if (total == 0):
+    print("有商品之存貨不足!")
+else:
+    print(f"<p>總價：{total}</p>")
 print("<a href='MyList.py'>回購物車</a>")
 print("<a href='Home.py'>回賣場</a>")
 print("</body></html>")

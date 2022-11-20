@@ -28,13 +28,13 @@ def deleteFromMyList(id):
 def checkS(id):
     sql="SELECT `stock` FROM `商家db` WHERE id=%s"
     cur.execute(sql,(id,))
-    conn.commit()
-    return True
+    S = cur.fetchall()
+    return S
 def checkQ(id):
     sql="SELECT `quantity` FROM `我的購物車` WHERE id=%s"
     cur.execute(sql,(id,))
-    conn.commit()
-    return True
+    Q = cur.fetchall()
+    return Q
 
 #商家管理
 #查詢存貨列表
