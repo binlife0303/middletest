@@ -10,8 +10,11 @@ print('<html><head><meta charset="utf-8"><title>將商品加入購物車</title>
 
 table = cgi.FieldStorage()
 id = table.getvalue('id')
-quantity = table.getvalue('數量')
-sql.addMyList(id, quantity)
+name = table.getvalue('name')
+price = table.getvalue('price')
+quantity = table.getvalue('quantity')
+sql.addMyList(id, name, price, quantity)
+sql.getMyList()
 print("商品已存入購物車")
 print("<br><a href='MyList.py'>回購物車</a>")
 print("</body></html>")

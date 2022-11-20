@@ -10,9 +10,9 @@ print('<html><head><meta charset="utf-8"><title>新商品上架</title></head><b
 
 table = cgi.FieldStorage()
 id = table.getvalue('id')
-stock = table.getvalue('stock')
+stock = table.getvalue('newStock')
 sql.add(id, stock)
-sql.updateShopList(id)
+sql.getShopList()
 print("商品存貨已增加!")
 print("<a href='Home.py'>確認</a>")
 print("</body></html>")

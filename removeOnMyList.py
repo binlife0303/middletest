@@ -6,7 +6,7 @@ import sql as sql
 from dbConfig import conn, cur
 
 print("Content-type: text/html\n")
-print('<html><head><meta charset="utf-8"><title>新商品上架</title></head><body>')
+print('<html><head><meta charset="utf-8"><title>移除購物車</title></head><body>')
 
 table = cgi.FieldStorage()
 id = table.getvalue('id')

@@ -1,4 +1,4 @@
-#!C:\Users\HappyUser\AppData\Local\Programs\Python\Python38\python.exe
+#!C:\Python311\python.exe
 #-*- coding: utf-8 -*-
 #import mariadb
 import mysql.connector 
